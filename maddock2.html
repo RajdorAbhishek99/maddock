@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+	<link rel="icon" type="image/x-icon"
+		href="https://static.vecteezy.com/system/resources/previews/021/054/569/non_2x/3d-gold-effect-letter-m-free-png.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+	<title>Maddock Films</title>
+	<style>
+		* {
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: rgba(3, 3, 1, 0.767);
+		}
+
+		.nav {
+			display: flex;
+			/*align-items: center;*/
+			background-color: rgba(0, 0, 0, 0.658);
+			justify-content: space-between;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 100px;
+			z-index: 9;
+
+
+		}
+
+		.nav2 {
+			background-color: rgb(0, 0, 0);
+			align-items: center;
+			position: sticky;
+			bottom: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9;
+
+		}
+
+		.nav:hover {
+			color: rgb(228, 12, 12);
+			background-color: rgba(218, 4, 4, 0.39);
+
+		}
+
+		.menu-list {
+			display: flex;
+			list-style: none;
+
+
+		}
+
+		.img {
+			height: 100px;
+		}
+
+		.menulink {
+
+			padding: 39px;
+			text-decoration: none;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			color: white;
+			font-weight: 800;
+			font-style: var(100%);
+			display: flex;
+			z-index: 1px;
+			;
+
+		}
+
+		.background {
+			height: 100vh;
+			width: 100%;
+			background-image: url(https://filmyhype.com/wp-content/uploads/2025/01/Maddock-Supernatural-Universe.jpg);
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+
+		.text h1 {
+			font-size: 25px;
+			color: white;
+			height: 10px;
+			justify-content: center;
+			align-items: center;
+			margin: top 50%;
+
+		}
+
+		.text {
+			width: 40%;
+			background-color:
+				rgba(255, 255, 255, 0.404);
+			padding: 45px;
+			border: 2px solid rgba(10, 212, 20, 0.753);
+
+		}
+
+		.text:hover {
+			border-color: red;
+
+		}
+
+		.heading {
+			text-align: center;
+			font-size: 40px;
+			background-color: black;
+			color: white;
+
+
+		}
+
+		.heading:hover {
+			color: black;
+			background-color: yellow;
+		}
+
+		.mt5 {
+			margin-top: 20px;
+
+		}
+
+		.box {
+			width: 100%;
+			height: 500px;
+			overflow: hidden;
+			border: 5px solid black;
+			margin: 20px;
+
+		}
+
+		.box:hover {
+			border-color: rgb(235, 18, 3);
+		}
+
+		.servicesbox {
+			height: 100%;
+			width: 100%;
+			display: flex;
+		}
+
+		.box img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: scale(1);
+			transition: .9s;
+
+		}
+
+		.box img:hover {
+			transform: scale(1.2);
+
+		}
+
+		.menulink:hover {
+			color: rgba(17, 16, 16, 0.836);
+			background-color: rgba(63, 241, 9, 0.534);
+		}
+
+		.btn {
+			background-color: rgb(3, 0, 0);
+			padding: 15px 20px;
+			margin-top: 20px;
+			display: inline-block;
+			color: whitesmoke;
+			text-decoration: none;
+			border-radius: 4px;
+		}
+
+		.btn:hover {
+			color: black;
+			background-color: rgba(187, 19, 19, 0.61);
+
+		}
+
+		.aboutcontent {
+			background-color: rgb(216, 205, 205);
+			color: white;
+			padding: 5px;
+			display: none;
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: bold;
+			text-decoration: none;
+
+		}
+
+		.aboutcontent:hover {
+			background-color: rgba(14, 3, 3, 0.911);
+			color: white;
+
+		}
+
+		.menuitems {
+			display: flex;
+			flex-direction: column;
+
+
+
+		}
+
+		.drop:hover .aboutcontent {
+			display: block;
+			list-style: none;
+			background-color: rgba(247, 249, 255, 0.623);
+
+
+
+		}
+
+		.space {
+			padding: 10px;
+			color: white;
+
+		}
+
+		.hover-effect {
+			transition: 0.2s ease-in-out;
+			/* Transition applied to all properties */
+		}
+
+		.hover-effect:hover {
+			transform: scale(1.03);
+			/* Scaling the element */
+			opacity: 0.8
+				/* Fading effect */
+
+
+		}
+
+		.imgfit {
+			height: 100%;
+			width: 400px;
+			object-fit: cover;
+		}
+
+		@media screen and (max-width: 320px) {
+			.servicesbox {
+				display: block;
+			}
+
+			.box {
+				margin: 5px 0px;
+			}
+
+			.nav {
+				display: none;
+			}
+
+			.text {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width:1024px) {
+			.nav {
+				display: none;
+			}
+
+			.text {
+				display: none;
+			}
+
+			.box {
+				height: 350px;
+			}
+		}
+	</style>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-black">
+	<div class="nav">
+		<div class="logo">
+			<img src="https://static.wikia.nocookie.net/maddocksupernaturaluniverse/images/c/c9/Maddock_Films_logo.png/revision/latest?cb=20240823144258"
+				alt="" class="img">
+		</div>
+		<div class="menu">
+			<ul class="menu-list">
+				<li class="menuitems"><a href="" class="menulink">Home <i class="ri-home-4-fill"></i></a></li>
+				<li class="menuitems drop"><a href="#about" class="menulink">About <i
+							class="ri-arrow-down-double-fill"></i></a>
+					<ul class="aboutcontent">
+						<Li class="space"><a href="maddock.html">Maddock Films</a></Li>
+						<Li class="space"><a href="maddockhits.html">Maddock Hit</a></Li>
+						<Li class="space"><a href="">Top Hits Tracks</a></Li>
+						<Li class="space"><a href="">Highest Grossers</a></Li>
+						<Li class="space"><a href="">Comdey Movies</a></Li>
+						<Li class="space"><a href="">Drama Movies</a></Li>
+
+					</ul>
+				</li>
+				<li class="menuitems drop"><a href="#newmovies" class="menulink">New Updates <i
+							class="ri-arrow-down-double-fill"></i></a>
+					<ul class="aboutcontent">
+						<li class="space"><a href="">Chaava</a></li>
+						<li class="space"><a href="">Stree 3</a></li>
+						<li class="space"><a href="">Bhediya 2</a></li>
+						<li class="space"><a href="">Shakti Shalini</a></li>
+					</ul>
+				</li>
+				<li class="menuitems"><a href="" class="menulink">Contact Us <i
+							class="ri-arrow-down-double-fill"></i></a>
+					<a href=""></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators object-fit">
+	<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+	<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+	<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+	<div class="carousel-item active">
+	  <img src="https://m.media-amazon.com/images/M/MV5BMmYxZTliN2YtZmY2ZC00MmEwLTlmM2ItY2JhNmM3NjEzYTdhXkEyXkFqcGc@._V1_.jpg" class="d-block w-100" alt="...">
+	  <div class="carousel-caption d-none d-md-block">
+		<h5>Sky Force</h5>
+		  </div>
+	</div>
+	<div class="carousel-item">
+	  <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-2006438,resizemode-75,msid-114017338/magazines/panache/stree-2-regular-ott-release-when-and-where-to-watch-the-horror-box-office-sensation-for-free.jpg" class="d-block w-100" alt="...">
+	  <div class="carousel-caption d-none d-md-block">
+		<h5>Stree 2 </h5>
+	  </div>
+	</div>
+	<div class="carousel-item">
+	  <img src="https://media.licdn.com/dms/image/v2/D4D22AQF2jBNhfUNVMQ/feedshare-shrink_800/feedshare-shrink_800/0/1705033870288?e=2147483647&v=beta&t=XDQ4R-YaBJY3swRi30jzjqyOhgr_kwRSpCWt0QCMR-A" class="d-block w-100" alt="...">
+	  <div class="carousel-caption d-none d-md-block">
+		<h5>Teri Baton me aisa uljha jiya</h5>
+	
+	  </div>
+	</div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="visually-hidden">Next</span>
+  </a>
+</div>
+	<div class="background bg-black">
+		<div class="text">
+			<h1>Maddock Films</h1>
+			<p>
+				Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in
+				2005. The company's first production venture was the film Finding Fanny (2014). The company has since
+				then produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium
+				(2017) and its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara
+				Bachke (2023), and Teri Baaton Mein Aisa Uljha Jiya (2024).
+
+				, . The franchise has been commercially successful, having grossed a combined ₹1,186 crore against a
+				combined budget of ₹235 crore.[1] The franchise has predominantly received positive reviews </p>
+
+			<a href="" class="btn">For More Details</a>
+
+		</div>
+	</div>
+	<section>
+		<div class="bg-dark"></div>
+		<div class="services mt5">
+			<h2 class="heading">Released <i class="ri-film-line"></i></h2>
+			<div class="servicesbox">
+				<div class="box">
+					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/Stree_-_2018_Movie_Poster.jpg/220px-Stree_-_2018_Movie_Poster.jpg"
+						alt="">
+				</div>
+				<div class="box">
+					<img src="https://m.media-amazon.com/images/M/MV5BMTA1NmUxYzItZmVmNy00YmQxLTk4Y2UtZjVkMWUwMWQ5N2IxXkEyXkFqcGc@._V1_.jpg"
+						alt="">
+				</div>
+				<div class="box">
+					<img src="https://i.ytimg.com/vi/d_BPlvbw_ok/maxresdefault.jpg" alt="">
+				</div>
+				<div class="box">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1GUqG_bySlFM6FUAZ6o4sjVPBKtuusTedAKsB6p6Y3IazD9JDiBhxZjTr4hqJK3adJE&usqp=CAU"
+						alt="">
+				</div>
+			</div>
+			<div class="servicesbox">
+				<div class="box">
+					<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTH5jvqIXsfnhQpjGcsKWMzohXibUzqIEZLwh-KSGMrvaqL1tw6Jb62hwQwXyUuKzJLVORr"
+						alt="">
+				</div>
+				<div class="box">
+					<img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/raabta-exclusively-for-women-et00058294-10-06-2017-05-12-56.jpg"
+						alt="">
+				</div>
+				<div class="box">
+					<img src="https://m.media-amazon.com/images/M/MV5BOWQ5YWM1ZTctYmNiYy00MDk2LWI3ZTMtZjlkMzAyOTM0MDkyXkEyXkFqcGc@._V1_.jpg"
+						alt="">
+				</div>
+				<div class="box">
+					<img src="https://st1.latestly.com/wp-content/uploads/2019/01/36-2.jpg" alt="">
+				</div>
+			</div>
+
+	</section>
+	<h2 class="heading" id="newmovies">Upcoming Movies <i class="ri-vidicon-2-fill"></i></h2>
+	<div class="servicesbox">
+		<div class="box">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokK39tjxNVk36peKHGqVilGZ08Lp0QS4G7w&s"
+				alt="">
+		</div>
+		<div class="box">
+			<img src="https://staticimg.amarujala.com/assets/images/2025/01/04/shakata-shalna_33c6fb01f5153c6a6cf63b8f50256431.jpeg?q=50&w=480&dpr=2.6"
+				alt="">
+		</div>
+		<div class="box">
+			<img src="https://assetscdn1.paytm.com/images/cinema/Bhediya2-c0c2bfd0-df36-11ed-b7c0-853cfd7b4853.jpg"
+				alt="">
+		</div>
+		<div class="box">
+			<img src="https://cms.patrika.com/wp-content/uploads/2025/01/Stree-3-Release-Date-shraddha-kapoor-film-13-august-2027-and-Maha-Munjya-14-august-2027.jpg?w=640"
+				alt="">
+		</div>
+	</div>
+	<div class="services mt5 text-white">
+		<h2 class="heading" id="about">Maddock Films <i class="ri-dv-fill"></i></h2>
+		<p>Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in 2005.
+			The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The franchise has been commercially successful,
+			having grossed a combined ₹1,186 crore against a combined budget of ₹235 crore.[1] The franchise has
+			predominantly received positive reviews
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024).
+			The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The company's first production venture was the
+			film Finding Fanny (2014). The company has since then produced Hindi films such as Love Aaj Kal (2009),
+			Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and its sequel Angrezi Medium, Luka Chuppi (2019),
+			Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and Teri Baaton Mein Aisa Uljha Jiya (2024).
+			Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in
+			2005. The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+			Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in
+			2005. The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+			Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in
+			2005. The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+			Maddock Films Pvt. Ltd. is a production company founded by Indian producer and director Dinesh Vijan in
+			2005. The company's first production venture was the film Finding Fanny (2014). The company has since then
+			produced Hindi films such as Love Aaj Kal (2009), Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and
+			its sequel Angrezi Medium, Luka Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and
+			Teri Baaton Mein Aisa Uljha Jiya (2024).
+
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The franchise has been commercially successful,
+			having grossed a combined ₹1,186 crore against a combined budget of ₹235 crore.[1] The franchise has
+			predominantly received positive reviews
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The franchise has been commercially successful,
+			having grossed a combined ₹1,186 crore against a combined budget of ₹235 crore.[1] The franchise has
+			predominantly received positive reviews
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The franchise has been commercially successful,
+			having grossed a combined ₹1,186 crore against a combined budget of ₹235 crore.[1] The franchise has
+			predominantly received positive reviews
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024). The franchise has been commercially successful,
+			having grossed a combined ₹1,186 crore against a combined budget of ₹235 crore.[1] The franchise has
+			predominantly received positive reviews
+			They also have their own film universe called the Maddock Horror Comedy Universe which consists of Stree
+			(2018), Stree 2 (2024), Bhediya (2022) and Munjya (2024).They also have their own film universe called the
+			Maddock Horror Comedy Universe which consists of Stree (2018), Stree 2 (2024), Bhediya (2022) and Munjya
+			(2024)
+		</p>
+
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+				<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+				<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://m.media-amazon.com/images/M/MV5BMmYxZTliN2YtZmY2ZC00MmEwLTlmM2ItY2JhNmM3NjEzYTdhXkEyXkFqcGc@._V1_.jpg"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Sky Force</h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-2006438,resizemode-75,msid-114017338/magazines/panache/stree-2-regular-ott-release-when-and-where-to-watch-the-horror-box-office-sensation-for-free.jpg"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Stree 2 </h5>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://peepingmoon-cdn.sgp1.digitaloceanspaces.com/engpeepingmoon/140624063727-666be5277deeemujya.jpg"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Munjya.</h5>
+
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</a>
+		</div>
+
+		<div class="container-fluid mt-5 mb-5">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow">
+						<img src="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/5432/1375432-i-93bc1bce6283"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: white;">Stree</h3>
+						<p> In the town of Chanderi, there is a widespread belief in the spirit of an angry woman known
+							as Stree. During a four-day religious festival each year, she is said to stalk the men of
+							the town, whispering their names and causing disappearances if they look back at her. Each
+							time she kidnaps any man, they leave behind all their clothes. To protect themselves,
+							residents write "O Stree Kal Aana" (Oh Woman Come Tomorrow) with a magical liquid mix on
+							their doorways. Additionally, men are advised to avoid going out alone after 10 PM during
+							the festival and to move in groups for safety. This practice reflects a societal parallel to
+							the precautions typically advised to women for their own protection.</p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow">
+						<img src="https://observervoice.com/wp-content/uploads/2025/01/Maddock-Films-Unveils-Exciting-Horror-Comedy-Lineup.jpg"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: white; text-align: center;">Munjya
+						</h3>
+						<p> In 1952, in a village in the Konkan, a young boy named Gotya is in love with Munni, a girl
+							seven years older than him. When Munni's marriage is arranged with another man, Gotya
+							unsuccessfully attempts to poison him. After being scolded by his mother and made a priest,
+							Gotya, determined to marry Munni, takes his sister Gita to a dense jungle called Chetukwadi
+							to perform black magic under a peepal tree. In the process, he accidentally kills himself
+							when trying to sacrifice his sister, and becomes a malevolent spirit named Munjya that
+							haunts the tree.Several decades later, in Pune, Bittu is a timid young man working as a
+							hairdresser at his mother Pammi's salon </p>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow">
+						<img src="https://i0.wp.com/boxofficeworldwide.com/wp-content/uploads/2024/03/img_0137-1.jpg?fit=739%2C415&ssl=1"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: white; text-align: center;">Bhediya
+						</h3>
+						<p> Road contractor Bhaskar and his cousin Janardan "JD" visit Ziro, Arunachal Pradesh for a
+							road-building project. Two natives, Jomin and Panda, show them around. One night in the
+							forest, Bhaskar is bitten by a wolf on his rear end. Anika, the local veterinarian, saves
+							him. The next day, Bhaskar begins to see changes in himself, like heightened senses of smell
+							and hearing, and communicating with animals. Meanwhile, the locals and tribals are opposed
+							to the idea of cutting down trees to build roads.he wolf that had bitten Bhaskar appears and
+							kills the cop. The group goes to an elderly shaman for treatment; he informs them that the
+							only way for Bhaskar to be cured is for him to be bitten by the same.
+					</div>
+				</div>
+				<div class="col-lg-4 mt-5">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow ">
+
+						<img src="https://cdn.daily-sun.com/public/news_images/2019/03/01/DAILY-SUN-LUKA-CHUPPI-1.jpg"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: white; text-align: center;">Luka
+							Chupi</h3>
+						<p> Vishnu Trivedi, a failing politician in the small town of Mathura, campaigns to ban live-in
+							relationships, seeing them as a disgrace to the Indian conservative culture. At the same
+							time, his party begins to lead an all-out campaign against film star Nazeem Khan, who is
+							allegedly in a live-in relationship with his girlfriend, exactly the cause behind his grudge
+							against live-in relationships.
+
+							Vishnu's daughter Rashmi takes up an internship at a local news channel, and starts working
+							with the channel's star reporter Vinod "Guddu" Shukla and his best friend, cameraman Abbas
+							Sheikh. Guddu and Rashmi fall in love and Guddu proposes to her. Not ready for marriage, she
+							suggests a live-in relationship, but he, being more traditional and somewhat scared of
+							Vishnu, disagrees. As a compromise, Abbas suggests trying a live-in relationship during
+							their 20-day business trip to Gwalior. The couple agrees.Once his family, too, catches up,
+							Guddu reveals to Vishnu that the main reason for his loss in elections is his reluctance to
+							change; since the majority of the voting group is the young generation, which believes in
+							modernity, opposing the youth's methods would equal lack of support from them
+					</div>
+				</div>
+				<div class="col-lg-4 mt-5">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow ">
+
+						<img src="https://m.media-amazon.com/images/S/pv-target-images/9e095b1e21fbddbf03987df69256a79c0066c0d184e9c563824e4d1e97c1ba5a.jpg"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: rgb(255, 255, 255); text-align: center;">Hindi
+							Medium</h3>
+						<p> Raj Batra is a successful boutique owner who lives in the Old Delhi neighbourhood of Chandni
+							Chowk with his wife Meeta and his 5-year-old daughter, Pia. The couple wants Pia to be
+							admitted to a prestigious English-medium school in Delhi as they feel that this will enable
+							her to become a part of elite society. They decide on Delhi Grammar School, which is ranked
+							the best in the city, but requires that students must stay within a 3-km radius of the
+							school. They move to a posh villa in New Delhi's upscale Vasant Vihar neighbourhood and try
+							to become more refined in their manner. A consultant, Saumya, despite her misgivings about
+							them, tutors them in the answers to be given in the admission interview, but their limited
+							knowledge of English means Pia's application is rejected.
+
+							Raj and Meeta learn from an employee that his daughter has been admitted through the RTE
+							quota, a scheme that helps children from poor families to be admitted to prestigious
+							schools.Raj, Meeta & Pia return to Vasant Vihar. Raj and Meeta make a donation to the Bharat
+							Nagar Government School, where Mohan studies, to renovate it and get new books. After
+							watching their son become fluent in English, hyam and Tulsi search for the identity of the
+							anonymous donor to thank them. However, when he visits the donor's address in Vasant Vihar.
+					</div>
+				</div>
+				<div class="col-lg-4 mt-5">
+					<div class=" hover-effect text-bg-dark p-5 text-white rounded shadow">
+						<img src="https://www.hindustantimes.com/ht-img/img/2024/08/25/550x309/Stree_2_1724569898476_1724569905801.jpg"
+							class="img-fluid" alt="Responsive image">
+						<h3 style="background-color: rgba(255, 0, 0, 0.548); color: white; text-align: center;">Stree 2
+						</h3>
+						<p> Following the events of the first film, Stree leaves Chanderi after seeing her statue. Years
+							later, a new threat emerges in the form of Sarkata, a headless ghost who abducts women at
+							night. The townspeople believe the missing women have left for better opportunities. Rudra
+							receives an anonymous letter containing missing pages from the Chanderi Puran with the
+							message "Vo Aayega" (He will come). He warns Vicky, but Vicky dismisses his concerns.
+
+							One night, Bittu’s girlfriend Chitti is taken by Sarkata. A beggar who witnessed the
+							incident confirms the ghost's existence. The mysterious woman from the first film, known as
+							"She," briefly appears to Vicky and informs him about Sarkata. Vicky, Bittu, and Rudra
+							examine the torn pages of the Chanderi Puran and learn that Sarkata is the vengeful spirit
+							of Chandrabhan, a former village head who was an alcoholic womaniser. He despised
+							progressive women and murdered Stree when she was a courtesan, beheaded her husband, and
+							burned them alive in front of their daughter. Stree later returned as a spirit, killed
+							Chandrabhan and his associates, and buried their bodies. Now, after Stree's departure from
+							Chanderi, Sarkata has returned to target progressive women.
+
+							Realising they need Stree’s help, the group seeks out Jana in Delhi, who was once possessed
+							by Stree.</p>
+					</div>
+				</div>
+
+				<div class="nav2 text-white-50 mt-2 text-opacity-50 d-flex">
+					<div
+						style="background-color: #0b020c; color: white; width: 50%; padding: 10px; justify-content: center; opacity:50%;">
+						<p>
+							Maddock Films is an Indian film production
+							company founded by Indian producer and
+							director Dinesh Vijan in 2005. The company's
+							first production venture was the film Finding
+							Fanny (2014)addock Films is an Indian film production company founded by Indian producer and
+							director Dinesh Vijan in 2005. The company's first production venture was the film Finding
+							Fanny (2014). The company has since then produced Hindi films such as Love Aaj Kal (2009),
+							Cocktail (2012), Badlapur (2015), Hindi Medium (2017) and its sequel Angrezi Medium, Luka
+							Chuppi (2019), Bala (2019), Mimi (2021), Zara Hatke Zara Bachke (2023), and Teri Baaton Mein
+							Aisa Uljha Jiya 2024.</p>
+					</div>
+
+					<div style="width: 50%;">
+						<ul class="orderlistitems1 text-warning p-5 d-flex justify-content-evenly">
+							<div><i class="ri-instagram-line"> <a href="https://www.instagram.com/maddockfilms/?hl=en"
+										class="badge bg-danger btn btn-outline-light hover-effect"
+										target="_blank">Instagram</a> </i></div>
+
+
+							<div><i class="ri-facebook-fill"><a href="https://www.facebook.com/maddockfilms/"
+										class="badge bg-primary btn btn-outline-light hover-effect"
+										target="_blank">Facebook</a></i></div>
+
+							<div><i class="ri-youtube-fill"> <a href="https://www.youtube.com/@MaddockFilms"
+										class="badge bg-danger btn btn-outline-light hover-effect red"
+										target="_blank">Youtube</a></i></div>
+
+
+							<div><i class="ri-twitter-x-line"> <a
+										href="https://x.com/MaddockFilmsref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+										class="badge bg-info btn btn-outline-light hover-effect"
+										target="_blank">Twitter</a></i></div>
+						</ul>
+					</div>
+
+				</div>
+</body>
+
+</html>
+</div>
+
+</html>
